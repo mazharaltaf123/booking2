@@ -15,9 +15,11 @@ import { useNavigation, useRoute } from '@react-navigation/native';
 import MyProfile from '../screens/MyProfile';
 import Schedule from '../screens/Appointment/Appointment';
 import Notification from '../screens/Notification/Notification';
+import { useSelector } from 'react-redux';
 
 const Tab = createBottomTabNavigator();
 
+const users = useSelector((state) => state.user.users);
 const Tab1Screen = () => (
     <View >
       <Text>Tab 1</Text>
